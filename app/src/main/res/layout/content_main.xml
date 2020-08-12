@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:text="Please Select a movie to view"/>
+
+            <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+            android:id="@+id/hicvp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+            app:icvp_scroll_duration="250"
+            app:icvp_center_page_scale_offset="30dp"
+            app:icvp_min_page_scale_offset="5dp"
+            app:icvp_max_page_scale="0.8"
+            app:icvp_min_page_scale="0.55"
+            app:icvp_medium_scaled="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:text="Trailer"/>
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:id="@+id/youtube_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/bCast"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"
+                    android:text="Cast and Crew"/>
+                <Button
+                    android:id="@+id/bSynopsis"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="20dp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Synopsis"/>
+
+            </LinearLayout>
+            <Button
+                android:layout_marginTop="16dp"
+                android:id="@+id/bReviews"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reviews"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        layout="@layout/progress_bar_full"/>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Movie Buff</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="text_username">Email Id</string>
+    <string name="text_password">Password</string>
+
+
+    <string name="youtube_key">AIzaSyADWsNC9qLzXXZ8xSb9pbNlYA6WCbxRMeI</string> //TODO ADD Youtube API Key https://developers.google.com/youtube/v3/getting-started
+</resources>
